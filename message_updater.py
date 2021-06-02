@@ -21,27 +21,27 @@ def get_actions_environ(
     return default_value
 
 
-async def post_or_update():
+async def message_or_update():
     channel = client.get_channel(
         int(get_actions_environ("DISCORD_CHANNEL", required=True))
     )
     message_id = get_actions_environ("DISCORD_MESSAGE", channel.last_message_id)
 
-    post_file_path = get_actions_environ("POST_FILE", "/etc/discord-post-updater/post")
-    with open(post_file_path) as post_file:
-        post = post_file.read()
+    message_file_path_file_path = get_actions_environ("MESSAGE_FILE", "/etc/discord-message-updater/message")
+    with open(message_file_path) as message_file:
+        message = message_file.read()
 
     if message_id and message_id != "new":
-        message = await channel.fetch_message(message_id)
-        await message.edit(content=post)
+        discord_message = await channel.fetch_message(message_id)
+        await discord_message.edit(content=message)
     else:
-        await channel.send(content=post)
+        await channel.send(content=message)
 
 
 @client.event
 async def on_ready():
     print(f"Logged in as {client.user}")
-    await post_or_update()
+    await message_or_update()
     await client.logout()
     
 print(f"Token: ")
