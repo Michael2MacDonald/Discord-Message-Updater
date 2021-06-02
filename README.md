@@ -1,11 +1,13 @@
-# discord-post-updater
+# Discord-Post-Updater
 A quick tool for updating a post on Discord.
 
 Servers like to have information posts, however due to (reasonable) restrictions by
 discord, these posts have to be edited by their original author.
 
 This project solves that by storing the posts as markdown, and updating them in
-Discord by a bot, with the intention that this project is used within a CI system.
+Discord by a bot.
+
+This project is originally by [hreeder](https://github.com/hreeder/) but he seams to have stopped supporting it and the github action no longer worked so I created a clone.
 
 ## Usage - Docker
 This project publishes an official docker image at `hreeder/discord-post-updater`.
