@@ -1,6 +1,6 @@
 ---
 name: Discord Post Updater
-author: Harry Reeder <harry@reeder.dev>
+author: Michael MacDonald
 description: Update a post in Discord 
 inputs:
   discord_token:
