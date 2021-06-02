@@ -6,7 +6,7 @@ inputs:
   discord_token:
     description: Discord Bot Token for Authentication
     required: true
-  post_file:
+  message_file:
     description: Path to the file containing the message
     required: true
   discord_channel:
