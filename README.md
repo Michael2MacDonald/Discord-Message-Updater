@@ -10,7 +10,7 @@ Discord by a bot.
 This project is originally by [hreeder](https://github.com/hreeder/) but he seams to have stopped supporting it and the github action no longer worked so I created a clone.
 
 ## Usage - Docker
-This project publishes an official docker image at `hreeder/discord-post-updater`.
+This project publishes an official docker image at `hreeder/discord-post-updater`. TODO: Need to update
 
 Supply the following environment variables:
 * `DISCORD_TOKEN` - Your discord bot token
