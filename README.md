@@ -20,11 +20,11 @@ Optionally supply:
   `/etc/discord-message-updater/post` if not supplied.
 * `DISCORD_MESSAGE` - ID of the message. `new` will make a new post. Message ID it will update the specified message. If not supplied, the bot will update the last message in the channel.
 
-You have to add `uses: actions/checkout@v2.3.4` to the yml file or the path to the message file will not work
+You have to add `uses: actions/checkout@v2` to the yml file or the path to the message file will not work
 
 Example:
 ```yaml
-- uses: actions/checkout@v2.3.4
+- uses: actions/checkout@v2
 - uses: michael2macdonald/discord-message-updater
   with:
     discord_token: ${{ secrets.DISCORD_BOT_TOKEN }}
