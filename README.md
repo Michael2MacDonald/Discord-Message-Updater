@@ -1,4 +1,4 @@
-# Discord-Message-Updater
+# Discord Message Updater
 A quick tool for updating a message sent by a bot on Discord.
 
 Servers like to have information posts, however due to (reasonable) restrictions by
