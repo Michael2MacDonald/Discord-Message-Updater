@@ -1,5 +1,5 @@
-# Discord-Post-Updater
-A quick tool for updating a post on Discord.
+# Discord-Message-Updater
+A quick tool for updating a message sent by a bot on Discord.
 
 Servers like to have information posts, however due to (reasonable) restrictions by
 discord, these posts have to be edited by their original author.
@@ -9,8 +9,7 @@ Discord by a bot.
 
 This project is originally by [hreeder](https://github.com/hreeder/) but he seams to have stopped supporting it and the github action no longer worked so I created a clone.
 
-## Usage - Docker
-This project publishes an official docker image at `hreeder/discord-post-updater`. TODO: Need to update
+## Usage
 
 Supply the following environment variables:
 * `DISCORD_TOKEN` - Your discord bot token
@@ -18,27 +17,16 @@ Supply the following environment variables:
 
 Optionally supply:
 * `POST_FILE` - A path to the file containing the post content. Defaults to
-  `/etc/discord-post-updater/post`.
+  `/etc/discord-message-updater/post`.
 * `DISCORD_MESSAGE` - If not supplied, the bot will update the last message in the
   channel. If supplied as `new` the bot will make a new post, and if supplied as a
   message ID, it will update the specified message.
 
-## Usage - GitHub Actions
 ```yaml
-- uses: hreeder/discord-post-updater
+- uses: michael2macdonald/discord-message-updater
   with:
     discord_token: ${{ secrets.discord_bot_token }}
     post_file: README.md
     discord_channel: '1234567890' # N.B. The quote marks here are required
     discord_message: new # Optional, use quotes if specifying an ID
 ```
-
-Please see the Docker section for a description of each variable.
-
-## Usage - Source
-```
-pip install -r requirements.txt
-DISCORD_TOKEN=foo POST_FILE=/path/to/post DISCORD_CHANNEL=1234567890 python post_updater.py
-```
-
-As before, please see the Docker section for which environment varibles to set.
