@@ -43,6 +43,7 @@ async def on_ready():
     print(f"Logged in as {client.user}")
     await post_or_update()
     await client.logout()
-
-
+    
+print(f"Token: ")
+print(get_actions_environ("DISCORD_TOKEN", required=True))
 client.run(get_actions_environ("DISCORD_TOKEN", required=True))
