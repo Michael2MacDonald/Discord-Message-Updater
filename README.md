@@ -12,13 +12,13 @@ This project is originally by [hreeder](https://github.com/hreeder/) but he seam
 ## Usage
 
 Supply the following environment variables:
-* `DISCORD_TOKEN` - Your discord bot token
-* `DISCORD_CHANNEL` - Discord Channel ID in which to make the post
+* `discord_token` - Your discord bot token
+* `discord_channel` - Discord Channel ID in which to make the post
 
 Optionally supply:
-* `MESSAGE_FILE` - A path to the file containing the post content. Defaults to
+* `message_file` - A path to the file containing the post content. Defaults to
   `/etc/discord-message-updater/post` if not supplied.
-* `DISCORD_MESSAGE` - ID of the message. `new` will make a new post. Message ID it will update the specified message. If not supplied, the bot will update the last message in the channel.
+* `discord_message` - ID of the message. `new` will make a new post. Message ID it will update the specified message. If not supplied, the bot will update the last message in the channel.
 
 You have to add `uses: actions/checkout@v2` to the yml file or the path to the message file will not work
 
