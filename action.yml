@@ -17,7 +17,7 @@ inputs:
     required: false
 runs:
   using: docker
-  image: docker://ghcr.io/michael2macdonald/discord-post-updater
+  image: docker://ghcr.io/michael2macdonald/discord-message-updater
 branding:
   icon: edit
   color: purple
