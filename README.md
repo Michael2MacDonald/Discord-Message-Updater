@@ -27,8 +27,27 @@ Example:
 - uses: actions/checkout@v2.3.4
 - uses: michael2macdonald/discord-message-updater
   with:
-    discord_token: ${{ secrets.discord_bot_token }}
+    discord_token: ${{ secrets.DISCORD_BOT_TOKEN }}
     message_file: /messages/Rules.md
     discord_channel: '1234567890' # The quote marks here are required
     discord_message: new # Optional, use quotes if specifying an ID
+```
+
+My Working Example From One Of My Personal Projects:
+```yaml
+name: Discord Messages
+on: workflow_dispatch
+
+jobs:
+ discord-messages:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - name: readme
+      uses: michael2macdonald/discord-message-updater@v1.1.1
+      with:
+        discord_token: ${{ secrets.DISCORD_BOT_TOKEN }}
+        post_file: /github/workspace/Discord-Posts/readme.md
+        discord_channel: '829005760359825429'
+        discord_message: '849769031313522731'
 ```
