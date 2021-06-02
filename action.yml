@@ -1,5 +1,5 @@
 ---
-name: Discord Post Updater
+name: Discord Message Updater
 author: Michael MacDonald
 description: Update a post in Discord 
 inputs:
