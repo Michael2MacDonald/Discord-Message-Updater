@@ -27,7 +27,7 @@ async def message_or_update():
     )
     message_id = get_actions_environ("DISCORD_MESSAGE", channel.last_message_id)
 
-    message_file_path_file_path = get_actions_environ("MESSAGE_FILE", "/etc/discord-message-updater/message")
+    message_file_path = get_actions_environ("MESSAGE_FILE", "/etc/discord-message-updater/message")
     with open(message_file_path) as message_file:
         message = message_file.read()
 
